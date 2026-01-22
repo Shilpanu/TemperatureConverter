@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<style>
+    body {
+        background-color: #f0f8ff;
+        margin-top: 50px;
+    }
+    h3 {
+        color: #0a0ef8;
+        font-size: 30px;
+        font-family: 'Arial', sans-serif;
+    }
+    input {
+        padding: 10px;
+        font-size: 21px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid #769bd3;
+    }
+</style>
+<body>
+    <center>
+    <h3>Temperature Converter</h3>
+    <input type="number" id="celsius" placeholder="Celsius" 
+           onkeyup="convertCtoF()"> °C
+    <br><br>
+    <input type="number" id="fahrenheit" placeholder="Fahrenheit" 
+           onkeyup="convertFtoC()"> °F
+    </center>
+    <script>
+        function convertCtoF() {
+            let celsius = document.getElementById("celsius").value;
+            if (celsius !== "") {
+                let fahrenheit = (celsius * 9/5) + 32;
+                document.getElementById("fahrenheit").value = fahrenheit.toFixed(1);
+            }
+        }
+        
+        function convertFtoC() {
+            let fahrenheit = document.getElementById("fahrenheit").value;
+            if (fahrenheit !== "") {
+                let celsius = (fahrenheit - 32) * 5/9;
+                document.getElementById("celsius").value = celsius.toFixed(1);
+            }
+        }
+    </script>
+</body>
+</html>
+    
+</body>
+</html>
